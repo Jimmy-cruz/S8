@@ -1,0 +1,39 @@
+<!-- <p>home works!</p> -->
+
+<div>
+    <div>
+        <div>
+            <label for="">Nombres:</label>
+            <input type="text" name="" id="" #nombre>
+        </div>
+        <div>
+            <label for="">Apellidos:</label>
+            <input type="text" name="" id="" #apellido>
+        </div>
+        <div>
+            <label for="">Edad:</label>
+            <input type="number" name="" id="" #edad>
+        </div>
+        <button (click)="enviarDatos(nombre.value, apellido.value, edad.value)">Enviar</button>
+    </div>
+    <div>
+        <table class="table border">
+            <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let nom of datos">
+                    <td>{{nom[0]}}</td>
+                    <td>{{nom[1]}}</td>
+                    <td>{{nom[2]}}</td>
+                    <td>{{estado}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
